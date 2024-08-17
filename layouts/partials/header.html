@@ -1,0 +1,34 @@
+<nav class="navbar navbar-expand-lg navbar-dark sticky-top" aria-label="Eighth navbar example">
+  <div class="container">
+    <a class="navbar-brand" href="/">{{ .Site.Title }}</a>
+    {{ if .Site.Menus.main }}
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse justify-content-md-center" id="navbarSupportedContent">
+      <ul class="navbar-nav mb-2 mb-lg-0">
+        {{ $currentPage := . }}
+        {{ range .Site.Menus.main }}
+          {{ if .HasChildren }}
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown" aria-expanded="false">{{ .Name }}</a>
+            <ul class="dropdown-menu">
+              {{ range .Children }}
+                <li><a class="dropdown-item" href="{{ .URL | absLangURL | safeURL }}">{{ .Name }}</a></li>
+              {{ end }}
+            </ul>
+          </li>
+          {{ else }}
+          <li class="nav-item">
+            <a class="nav-link{{ if $currentPage.IsMenuCurrent "main" . }} active{{end}}" {{ if $currentPage.IsMenuCurrent "main" . }}aria-current="page"{{end}} href="{{ .URL | absLangURL | safeURL }}">{{ .Name }}</a>
+          </li>
+          {{ end }}
+        {{ end }}
+      </ul>
+      <div class="d-lg-flex col-lg-3 justify-content-lg-end">
+        <a class="btn btn-danger" href="/donate">Donate</a>
+      </div>
+    </div>
+    {{ end }}
+  </div>
+</nav>

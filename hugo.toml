@@ -1,0 +1,43 @@
+baseURL = 'https://trevormac.com/'
+languageCode = 'en-us'
+title = 'Trevor Macenski'
+disableHugoGeneratorInject = true
+disableKinds = ['rss', 'taxonomy']
+
+[module]
+  path = "functions"
+
+[services]
+  [services.googleAnalytics]
+    id = 'G-E8PE330PBS'
+
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true
+
+[params]
+  [params.contact]
+    email = 'macenski4benicia@gmail.com'
+
+[menus]
+  [[menus.main]]
+    name = 'Home'
+    pageRef = '/'
+    weight = 10
+  [[menus.main]]
+    name = 'About'
+    pageRef = '/about'
+    weight = 20
+  [[menus.main]]
+    name = 'Vision and Issues'
+    pageRef = '/vision-and-issues'
+    weight = 30
+  [[menus.main]]
+    name = 'Campaign'
+    pageRef = '/campaign'
+    weight = 40
+  [[menus.main]]
+    name = 'Contact'
+    pageRef = '/contact'
+    weight = 50
