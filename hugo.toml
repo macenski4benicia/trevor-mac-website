@@ -34,6 +34,46 @@ disableKinds = ['rss', 'taxonomy']
     pageRef = '/vision-and-issues'
     weight = 30
   [[menus.main]]
+    parent = 'Vision and Issues'
+    name = 'Arts and Culture'
+    pageRef = '/vision-and-issues/arts-and-culture'
+    weight = 10
+  [[menus.main]]
+    parent = 'Vision and Issues'
+    name = 'Business Relations and Accountability'
+    pageRef = '/vision-and-issues/business-relations-and-accountability'
+    weight = 20
+  [[menus.main]]
+    parent = 'Vision and Issues'
+    name = 'Development and Planning'
+    pageRef = '/vision-and-issues/development-and-planning'
+    weight = 30
+  [[menus.main]]
+    parent = 'Vision and Issues'
+    name = 'Economic Expansion'
+    pageRef = '/vision-and-issues/economic-expansion'
+    weight = 40
+  [[menus.main]]
+    parent = 'Vision and Issues'
+    name = 'Fiscal Accountability'
+    pageRef = '/vision-and-issues/fiscal-accountability'
+    weight = 50
+  [[menus.main]]
+    parent = 'Vision and Issues'
+    name = 'Historic Preservation'
+    pageRef = '/vision-and-issues/historic-preservation'
+    weight = 60
+  [[menus.main]]
+    parent = 'Vision and Issues'
+    name = 'Infrastructure'
+    pageRef = '/vision-and-issues/infrastructure'
+    weight = 70
+  [[menus.main]]
+    parent = 'Vision and Issues'
+    name = 'Open Government'
+    pageRef = '/vision-and-issues/open-government'
+    weight = 80
+  [[menus.main]]
     name = 'Campaign'
     pageRef = '/campaign'
     weight = 40
