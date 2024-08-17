@@ -3,7 +3,7 @@
 
 <div class='card {{ .Get "class" }}'>
   {{ with .Get "topImage" }}
-    <img src="{{ . }}" class="card-img-top">
+    <img src="{{ . | absLangURL | safeURL }}" class="card-img-top">
   {{ end }}
   <div class="card-body">
     {{ with .Get "title" }}
@@ -15,10 +15,10 @@
       {{ .Inner }}
     {{ end }}
     {{ with .Get "buttonLink" }}
-      <a href="{{ . }}" class="btn {{ $buttonClass }}">{{ $buttonText }}</a>
+      <a href="{{ . | absLangURL | safeURL }}" class="btn {{ $buttonClass }}">{{ $buttonText }}</a>
     {{ end }}
   </div>
   {{ with .Get "bottomImage" }}
-    <img src="{{ . }}" class="card-img-bottom">
+    <img src="{{ . | absLangURL | safeURL }}" class="card-img-bottom">
   {{ end }}
 </div>
