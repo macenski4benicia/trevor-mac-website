@@ -1,5 +1,6 @@
 +++
 title = 'Development and Planning'
+draft = true
 +++
 {{< bg-row class="py-3" markdown=true >}}
 ## Development and Planning

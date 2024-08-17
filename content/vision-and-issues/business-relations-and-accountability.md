@@ -1,5 +1,6 @@
 +++
 title = 'Business Relations and Accountability'
+draft = true
 +++
 {{< bg-row class="py-3" markdown=true >}}
 ## Business Relations and Accountability

@@ -1,6 +1,6 @@
 <div {{ with .Get "class" }} class="{{ . }}"{{ end }}>
   <div class="container">
-    <div class="row">
+    <div class="row {{ .Get "rowClass"}}">
       {{ if .Get "markdown" }}
         {{ .Inner | markdownify }}
       {{ else }}
